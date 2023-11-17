@@ -24,7 +24,7 @@
             </a>
         </div>
         <span style="text-align: center; font-size: 24px; text-transform: uppercase; font-weight: bold;">Dark Souls
-            World <img src="/gifs/bonfire1.gif" alt="" style="width: 60px; height: 60px;"></span>
+            World <img src="gifs/bonfire1.gif" alt="" style="width: 60px; height: 60px;"></span>
         <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
             <li><a href="index.html" class="nav-link px-2 ">Main</a></li>
             <li class="nav-item dropdown">
@@ -39,52 +39,65 @@
                 </ul>
             </li>
             <li><a href="About.html" class="nav-link px-2">About</a></li>
-        </ul>
+            
+        </ul> 
+        <button id="playPauseButton" style="width: 60px;">Play</button>  
 
 
     </header>
     <main>
         <div class="container-fluid text-center">
             <div class="row content">
-                <div class="col-sm-2 sidenav">
+                <div class="col-sm-2 sidenav"
+                    style="background-image: url(images/ds-background-dark.jpg); background-position: left center; background-attachment:fixed; background-repeat: no-repeat; background-size: contain;">
                     <p><a href="#">Link</a></p>
                     <p><a href="#">Link</a></p>
                     <p><a href="#">Link</a></p>
                 </div>
-                <div class="col-sm-9 text-left">
+                <div class="col-sm-8 text-left" style="background-color:rgba(238, 238, 238, 0.658)2d2;">
                     <hr class="hr-text" data-content="Main Story">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit quis harum, nisi nulla culpa magnam
-                        facilis illum sint aliquid laudantium ducimus quod laboriosam doloremque, ratione quas
-                        voluptatum. Harum ad dolor totam. Vero eligendi exercitationem temporibus voluptas hic, laborum
-                        dolorum iure sunt incidunt quae totam voluptatibus saepe alias. Dolore aspernatur in eaque ipsa
-                        laudantium deserunt cupiditate consequatur, perferendis laboriosam mollitia beatae obcaecati
-                        nisi expedita! Repellendus dicta sint minima tenetur soluta recusandae doloremque rerum id nobis
-                        repellat vitae, porro quis fugit exercitationem quae obcaecati voluptas vero illo asperiores
-                        odio iusto harum iure minus sequi! Pariatur doloribus ducimus iste maxime aperiam, voluptas
-                        aliquid odit corrupti quisquam deleniti repellendus cumque perferendis neque nostrum debitis
-                        delectus iure ut reiciendis soluta dignissimos doloremque? Maiores deserunt ea quas enim aliquid
-                        sed, commodi quisquam quasi aut perspiciatis nostrum qui fugiat est cupiditate praesentium
-                        asperiores odit officiis amet impedit neque consectetur id aspernatur. Explicabo vitae ullam
-                        ducimus perspiciatis, aspernatur repellendus quas asperiores dolores molestias debitis porro
-                        facere sunt reiciendis dolor, saepe voluptates nobis a quidem cumque, illo beatae ipsum
-                        laboriosam recusandae. Voluptatibus veritatis consectetur assumenda odio nihil saepe. Quidem
-                        voluptatum provident accusantium autem ipsum, magni earum vitae cum! Id libero voluptatum atque
-                        quisquam quaerat debitis enim dolor dolorem blanditiis quia laudantium, quasi distinctio
-                        doloribus officiis voluptas quas facere, dolores sit quae mollitia. Cupiditate porro quos vitae
-                        veniam perspiciatis dolore unde molestiae quidem assumenda dolor! Blanditiis optio dicta
-                        provident assumenda sed, beatae eos ratione eveniet nulla explicabo nihil maiores temporibus!
-                        Inventore reprehenderit alias consectetur officiis ratione, eos non totam. Sit rem quam nisi
-                        eius vel, eligendi aperiam deleniti molestias illum earum dolorem itaque molestiae laboriosam
-                        odio reiciendis dolor ducimus temporibus debitis nemo vitae repudiandae! Inventore doloribus ex
-                        culpa omnis a quia doloremque totam obcaecati dignissimos natus ratione hic officia ea
-                        cupiditate, aliquid impedit velit est quod expedita cum nesciunt atque voluptatibus. Culpa quia
-                        repellat deleniti odio, mollitia recusandae debitis ad sapiente. Totam quod tenetur aliquam
-                        commodi. Praesentium ducimus provident deserunt consequuntur architecto quis amet veniam
-                        accusamus tempora eos, vitae asperiores earum repellat laboriosam commodi. Deleniti, provident
-                        maiores soluta id, et accusamus vitae blanditiis, quibusdam pariatur aperiam culpa recusandae
-                        quidem porro.</p>
-                    <hr class="hr-text" data-content="Side Story">
+                    <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                        Watch Video About Story
+                    </button>
 
+
+                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+                        tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <iframe width="400" height="315"
+                                        src="https://www.youtube.com/embed/JvRjJHpiWFI?si=FM2fJnHzDOw0pjoo&amp;start=4"
+                                        title="YouTube video player" frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        allowfullscreen></iframe>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Understood</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p>The player character is a cursed undead, locked away in an undead asylum. After escaping the
+                        asylum, the player travels to Lordran to ring the Bells of Awakening. The bells awaken
+                        Kingseeker Frampt, who tells the player to ascend to Anor Londo, the home of the Gods. In Anor
+                        Londo, Gwynevere instructs the player to succeed Lord Gwyn and fulfil the prophecy. To
+                        accomplish this, the player must acquire the Lord Souls of the Witch of Izalith, Nito, and
+                        shards of Gwyn's own Lord Soul given to the Four Kings, and to the dragon Seath the Scaleless.
+                        Optionally, the player may encounter Darkstalker Kaathe, who encourages the player not to link
+                        the fire, but to let it die out and usher in the Age of Dark instead, due to humanity being
+                        created from the Furtive Pygmy's own Dark Soul. Once the player acquires the Lord Souls, they
+                        travel to the Kiln of the First Flame to battle Gwyn. Once Gwyn has been defeated, the player
+                        has the choice of linking the flame to preserve the Age of Fire or letting it die out to
+                        instigate the Age of Dark.</p>
+                    <hr class="hr-text" data-content="Side Story">
                     <div class="accordion accordion-flush" id="accordionFlushExample">
                         <div class="accordion-item">
                             <h2 class="accordion-header">
@@ -330,23 +343,120 @@
                         </div>
                     </div>
                     <hr class="hr-text" data-content="Location">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus tempora velit autem voluptas
-                        doloribus. Ipsam deleniti odio quidem modi quis quae praesentium quo ipsum, temporibus labore,
-                        iusto aperiam provident non dolores dignissimos at! Eaque tenetur consequatur rerum pariatur
-                        voluptatum ad nemo aperiam qui. Esse nulla voluptatum atque, ipsam eaque tempora ea neque ipsa
-                        fugiat ullam veritatis facere culpa maxime? Cumque nostrum vitae obcaecati esse officiis
-                        deserunt repellendus dicta neque consequuntur, eaque velit omnis blanditiis, dolor hic minima
-                        illum nulla debitis quasi doloribus! Sint laudantium ratione nisi repellendus similique porro
-                        aperiam ullam. Porro neque eveniet cumque saepe reprehenderit pariatur, repudiandae, inventore
-                        ducimus nostrum soluta iure nesciunt sunt natus quod. Ducimus corporis earum nisi vitae
-                        distinctio tempora nihil ratione mollitia, doloribus architecto maiores quas explicabo minima
-                        consequuntur ipsam facilis esse! Minus ipsum vel beatae. Cumque beatae aspernatur earum
-                        doloribus ullam reprehenderit deserunt minus, consequuntur obcaecati dignissimos fuga nihil odio
-                        placeat, facere blanditiis error voluptatem dolorem itaque et laboriosam a optio. Nostrum
-                        veritatis cupiditate voluptate, harum voluptatibus ipsa neque obcaecati culpa impedit
-                        laudantium, veniam aliquam recusandae vel rerum, dolor sequi aspernatur sunt iure. Magni
-                        repellat praesentium voluptatem doloremque vel eum quisquam cupiditate nulla accusamus, iste
-                        atque, sunt similique possimus blanditiis quia ratione ducimus.</p>
+
+                    <div class="container">
+                        <div class="story">
+                            <dl>
+                                <dt>Undead Asylum:</dt>
+                                <dd>A decrepit asylum teeming with undead and guarded by a great demon. It serves as the
+                                    introductory area for the game. </dd>
+                                <hr>
+
+                                <dt>Firelink Shrine:</dt>
+                                <dd>A lush, green cliff side ruin overlooking a city below. It serves as a central hub
+                                    and is the first location that is visited after escaping the Undead Asylum. </dd>
+                                <hr>
+
+                                <dt>Undead Burg:</dt>
+                                <dd>A fortified section of a town surrounded by large walls and watchtowers, filled with
+                                    hostile undead. </dd>
+                                <hr>
+                                <dt>Undead Parish:</dt>
+                                <dd>A separate section of the Undead Burg, containing the Undead Church, along with
+                                    various other buildings.</dd>
+                                <hr>
+                                <dt>Depths:</dt>
+                                <dd>A vast, dark sewer system beneath the Undead Burg, containing various tunnels and
+                                    waterways.</dd>
+                                <hr>
+                                <dt>Blighttown:</dt>
+                                <dd>A toxic shantytown, built in a deep, dark swamp.</dd>
+                                <hr>
+                                <dt>Quelaag's Domain:</dt>
+                                <dd>A large mound covered in spider webs. It serves as the lair of Chaos Witch Quelaag
+                                    and her sister.</dd>
+                                <hr>
+                                <dt>The Great Hollow:</dt>
+                                <dd>The hollowed out interior of an enormous Archtree, filled with dangerous Basilisks.
+                                </dd>
+                                <hr>
+                                <dt>Ash Lake:</dt>
+                                <dd>A primordial land covered in Archtrees and bodies of water. Located deep below
+                                    Lordran, the long-forgotten land is almost lifeless.</dd>
+                                <hr>
+                                <dt>Sen's Fortress:</dt>
+                                <dd>A mysterious fort littered with deadly traps. Supposedly built by the ancient gods,
+                                    it's the only route leading to Anor Londo.</dd>
+                                <hr>
+                                <dt>Anor Londo:</dt>
+                                <dd>A vast city located at the apex of Lordran. Once home to the gods, it lies
+                                    abandoned.</dd>
+                                <hr>
+                                <dt>Painted World of Ariamis:</dt>
+                                <dd>A mysterious, bleak and snowy land. Existing as a painting in Anor Londo, it's
+                                    inhabited by dangerous creatures.</dd>
+                                <hr>
+                                <dt>Darkroot Garden:</dt>
+                                <dd>A dark, dank forest located just outside the Undead Parish. Inhabited by living
+                                    trees, it's also home to the Forest Hunter covenant.</dd>
+                                <hr>
+                                <dt>Darkroot Basin:</dt>
+                                <dd>A section of the Darkroot Forest connects back to the Undead Burg. It contains
+                                    winding cliffside paths, Crystal Golems, and a large lake.</dd>
+                                <hr>
+                                <dt>Valley of Drakes:</dt>
+                                <dd>A narrow, treacherous valley located below Firelink Shrine. Guarded by several
+                                    Drakes, it serves as an intersection to various locations.</dd>
+                                <hr>
+                                <dt>The Catacombs:</dt>
+                                <dd>A series of dark, winding tunnels, brimming with undead skeletons, necromancers, and
+                                    traps.</dd>
+                                <hr>
+                                <dt>Tomb of the Giants:</dt>
+                                <dd>A pitch-black cavern deep below the land. Connecting from the Catacombs, it contains
+                                    colossal skeletal creatures.</dd>
+                                <hr>
+                                <dt>New Londo Ruins:</dt>
+                                <dd>A flooded city shrouded in night. Located below Firelink Shrine, this forsaken place
+                                    is crawling with the ghosts of former residents.</dd>
+                                <hr>
+                                <dt>The Duke's Archives:</dt>
+                                <dd>A grand library located at the apex of Anor Londo. Home to Seath the Scaleless and
+                                    his minions.</dd>
+                                <hr>
+                                <dt>Crystal Cave:</dt>
+                                <dd>A vast cavern lined with glittering crystals and invisible bridges. Inhabited by
+                                    Golems, it's also the location of Seath's source of power.</dd>
+                                <hr>
+                                <dt>Demon Ruins:</dt>
+                                <dd>A vast ruin built into the very walls of a lava-flooded cavern, deep below Lordran.
+                                </dd>
+                                <hr>
+                                <dt>Lost Izalith:</dt>
+                                <dd>A large dome-shaped construct located in the lava lake of the Demon Ruins. The
+                                    birthplace of the mother of demons and pyromancy.</dd>
+                                <hr>
+                                <dt>Firelink Altar:</dt>
+                                <dd>A mysterious altar located deep beneath Firelink Shrine. It serves as a gateway to
+                                    the Kiln of the First Flame.</dd>
+                                <hr>
+                                <dt>Kiln of the First Flame:</dt>
+                                <dd>The dwelling of Gwyn, Lord of Cinder, and the final location in the game. In ancient
+                                    times, it was where Gwyn famously linked the First Flame and prolonged the Age of
+                                    Fire.</dd>
+                            </dl>
+
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+
                     <hr class="hr-text" data-content="Bosses">
                     <div class="album py-5 bg-body-tertiary">
                         <div class="container">
@@ -995,8 +1105,8 @@
                                 <div class="col">
                                     <div class="card shadow-sm">
                                         <img class="bd-placeholder-img card-img-top" width="100%" height="225"
-                                            src="images/Manus-Father-of-the-Abyss.jpg" preserveAspectRatio="xMidYMid slice"
-                                            focusable="false">
+                                            src="images/Manus-Father-of-the-Abyss.jpg"
+                                            preserveAspectRatio="xMidYMid slice" focusable="false">
                                         </img>
                                         <div class="card-body">
                                             <p class="card-header-pills">Name:Manus, Father of the Abyss
@@ -1039,29 +1149,33 @@
                         accusamus necessitatibus dolore non quidem dolores, enim aspernatur, provident inventore?</p>
                     <hr>
                 </div>
+                <div class="col-sm-2 sidenav"
+                    style="background-image: url(images/ds-background-dark.jpg); background-attachment: fixed; background-repeat: no-repeat; background-position: right; background-size: contain;">
+                    <div class="well">
+                        <p>ADS</p>
+                    </div>
+                    <div class="well">
+                        <p>ADS</p>
+                    </div>
+                </div>
             </div>
 
         </div>
-        <div class="col-sm-2 sidenav">
-            <div class="well">
-                <p>ADS</p>
-            </div>
-            <div class="well">
-                <p>ADS</p>
-            </div>
-        </div>
-        </div>
 
 
 
 
 
-        <!-- <div class="Audio">
-            <audio controls autoplay loop>
+
+
+        <div class="Audio">
+            <audio loop id="backgroundAudio" style="display: none;">
                 <source src="audio/28_Gwyn, Lord of Cinder.mp3" type="audio/mp3">
                 Ваш браузер не поддерживает аудио элемент.
             </audio>
-        </div> -->
+            
+        </div>
+        
         <footer class="text-center text-lg-start text-white" style="background-color: rgb(51, 51, 51)">
 
             <div class="container p-4 pb-0">
