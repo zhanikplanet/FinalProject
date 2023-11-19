@@ -44,19 +44,36 @@
       </li>
       <li><a href="About.html" class="nav-link px-2">About</a></li>
     </ul>
+    <!-- Поле для ввода поискового запроса -->
+<input type="text" id="searchInput" placeholder="Search">
+
+<!-- Контейнер для отображения результатов поиска -->
+<div id="searchResults"></div>
+
 
 
   </header>
   <main>
+    <div class="mask">
+      <div id="load" class="loader">
+        <div>D</div>
+        <div>E</div>
+        <div>I</div>
+        <div>D</div>
+        <div>U</div>
+        <div>O</div>
+        <div>Y</div>
+      </div>
+    </div>
+        
+     
     <div class="container-fluid text-center">
       <div class="row content">
-        <div class="col-sm-2 sidenav"
+        <div class="col-sm-1 sidenav"
           style="background-image: url(images/ds-background-dark.jpg); background-position: left center; background-attachment:fixed; background-repeat: no-repeat; background-size: contain;">
-          <p><a href="#">Link</a></p>
-          <p><a href="#">Link</a></p>
-          <p><a href="#">Link</a></p>
+
         </div>
-        <div class="col-sm-8 text-left" style="background-color:rgba(238, 238, 238, 0.658)2d2;">
+        <div class="col-sm-10 text-left" style="background-color:rgba(238, 238, 238, 0.658)2d2;">
           <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
             <div class="carousel-indicators">
               <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true"
@@ -229,17 +246,12 @@
           </div>
 
         </div>
-        <div class="col-sm-2 sidenav"
-        style="background-image: url(images/ds-background-dark.jpg); background-attachment: fixed; background-repeat: no-repeat; background-position: right; background-size: contain;">
-        <div class="well">
-          <p>ADS</p>
-        </div>
-        <div class="well">
-          <p>ADS</p>
+        <div class="col-sm-1 sidenav"
+          style="background-image: url(images/ds-background-dark.jpg); background-attachment: fixed; background-repeat: no-repeat; background-position: right; background-size: contain;">
+
         </div>
       </div>
-      </div>
-      
+
     </div>
 
 

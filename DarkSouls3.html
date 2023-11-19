@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dark Souls 3</title>
     <link rel="icon" href="images/34054-3-dark-souls-file_64x64.ico" type="image/x-icon">
-    <link rel="stylesheet" href="css/DarkSouls2.css">
+    <link rel="stylesheet" href="css/DarkSouls3.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
@@ -34,25 +34,42 @@
                 </a>
                 <ul class="dropdown-menu">
                     <li><a class="dropdown-item " href="DarkSouls1.html">Dark Souls 1</a></li>
-                    <li><a class="dropdown-item " href="DarkSouls2.html">Dark Souls 2</a></li>
+                    <li><a class="dropdown-item" href="DarkSouls2.html">Dark Souls 2</a></li>
                     <li><a class="dropdown-item link-secondary" href="DarkSouls3.html">Dark Souls 3</a></li>
                 </ul>
             </li>
             <li><a href="About.html" class="nav-link px-2">About</a></li>
-        </ul>
 
+        </ul>
+        <button id="playPauseButton" style="width: 60px;">Play</button>
+
+    <!-- Поле для ввода поискового запроса -->
+    <input type="text" id="searchInput" placeholder="Search">
+
+    <!-- Контейнер для отображения результатов поиска -->
+    <div id="searchResults"></div>
 
     </header>
     <main>
+        <div class="mask">
+            <div id="load" class="loader">
+                <div>D</div>
+                <div>E</div>
+                <div>I</div>
+                <div>D</div>
+                <div>U</div>
+                <div>O</div>
+                <div>Y</div>
+              </div>
+          </div>
+
         <div class="container-fluid text-center">
             <div class="row content">
-                <div class="col-sm-2 sidenav"
+                <div class="col-sm-1 sidenav"
                     style="background-image: url(images/ds-background-dark.jpg); background-position: left center; background-attachment:fixed; background-repeat: no-repeat; background-size: contain;">
-                    <p><a href="#">Link</a></p>
-                    <p><a href="#">Link</a></p>
-                    <p><a href="#">Link</a></p>
+
                 </div>
-                <div class="col-sm-8 text-left" style="background-color:rgba(238, 238, 238, 0.658)2d2;">
+                <div class="col-sm-10 text-left" style="background-color:rgba(238, 238, 238, 0.658)2d2;">
                     <hr class="hr-text" data-content="Main Story">
                     <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                         Watch Video About Story
@@ -69,7 +86,11 @@
                                         aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
-
+                                    <iframe width="400" height="315"
+                                        src="https://www.youtube.com/embed/JvRjJHpiWFI?si=FM2fJnHzDOw0pjoo&amp;start=4"
+                                        title="YouTube video player" frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        allowfullscreen></iframe>
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary"
@@ -79,15 +100,18 @@
                             </div>
                         </div>
                     </div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse fugit quisquam quas culpa
-                        distinctio, magni enim beatae nemo assumenda iste temporibus voluptatibus aliquid aspernatur!
-                        Neque id, deleniti soluta omnis reiciendis, architecto recusandae consectetur quisquam saepe ab
-                        dolore perspiciatis totam, consequuntur autem. Modi soluta doloremque, vero animi porro eligendi
-                        aliquid, asperiores ea laudantium nisi totam sed consequuntur veniam nihil maiores, cupiditate
-                        vitae sunt aliquam unde necessitatibus! Quod enim quam repudiandae error dicta non sint.
-                        Possimus non enim dignissimos vel fuga, consectetur maiores amet libero cum quae voluptatum
-                        neque praesentium ducimus porro obcaecati distinctio est error quibusdam veritatis. Corporis
-                        enim animi sapiente.</p>
+                    <p>The player character is a cursed undead, locked away in an undead asylum. After escaping the
+                        asylum, the player travels to Lordran to ring the Bells of Awakening. The bells awaken
+                        Kingseeker Frampt, who tells the player to ascend to Anor Londo, the home of the Gods. In Anor
+                        Londo, Gwynevere instructs the player to succeed Lord Gwyn and fulfil the prophecy. To
+                        accomplish this, the player must acquire the Lord Souls of the Witch of Izalith, Nito, and
+                        shards of Gwyn's own Lord Soul given to the Four Kings, and to the dragon Seath the Scaleless.
+                        Optionally, the player may encounter Darkstalker Kaathe, who encourages the player not to link
+                        the fire, but to let it die out and usher in the Age of Dark instead, due to humanity being
+                        created from the Furtive Pygmy's own Dark Soul. Once the player acquires the Lord Souls, they
+                        travel to the Kiln of the First Flame to battle Gwyn. Once Gwyn has been defeated, the player
+                        has the choice of linking the flame to preserve the Age of Fire or letting it die out to
+                        instigate the Age of Dark.</p>
                     <hr class="hr-text" data-content="Side Story">
                     <div class="accordion accordion-flush" id="accordionFlushExample">
                         <div class="accordion-item">
@@ -95,13 +119,39 @@
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#flush-collapseOne" aria-expanded="false"
                                     aria-controls="flush-collapseOne">
-                                    DS2
+                                    Praise the Sun
                                 </button>
                             </h2>
                             <div id="flush-collapseOne" class="accordion-collapse collapse"
                                 data-bs-parent="#accordionFlushExample">
                                 <div class="accordion-body">
-                                    <p style="width: 50%; float: left;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, iusto temporibus nisi, incidunt maxime sint eaque veniam vel, in quae tempora dignissimos harum. Iusto natus, laborum quisquam animi harum fuga itaque velit blanditiis ad ipsa neque dolorum soluta odit fugiat earum culpa, doloremque vero nulla autem. Illum nihil, temporibus laudantium, quae ipsum vero itaque id odit cum labore, pariatur a nam at velit quasi saepe est. Eius aliquid totam, sit modi iure at dolore expedita facilis quisquam est maxime blanditiis dicta, velit culpa? Culpa et, ab eos consequuntur dolores placeat qui delectus ullam quasi nihil aperiam eius cumque natus recusandae.
+                                    <p style="width: 50%; float: left;">The NPC behind the Dark Souls franchise's most
+                                        enduring
+                                        meme, Solaire of Astora is one of the game's most memorable characters. This
+                                        jovial
+                                        knight intentionally became Undead to visit Lordran and, "seek his own sun."
+                                        While
+                                        even Dark Souls loremasters are unclear exactly what this means, Solaire
+                                        cheerfully
+                                        requests the Chosen Undead's help and introduces them to the ever-helpful
+                                        summoning
+                                        mechanic.
+
+                                        After speaking with him in Undead Burg, players belonging to the Chaos Servant
+                                        Covenant will have the opportunity to fight a horde of Chaos Bugs in the
+                                        shortcut to
+                                        Lost Izalith. The final bug will drop the Sunlight Maggot -- a unique golden
+                                        helmet
+                                        that shines like the sun. If this enemy is not killed, Solaire will be found
+                                        wearing
+                                        the helmet, possessed by the metallic parasite, and hostile toward the player.
+                                        If he
+                                        is saved by the Chosen Undead's intervention, however, he will be available as a
+                                        valuable ally against the game's final boss. Unlike other summonable NPCs who
+                                        appear
+                                        as transparent phantoms in battle, Solaire appears in the flesh for this
+                                        climactic
+                                        fight, rendering him one of the most heroic NPCs in the Dark Souls franchise.
                                     </p>
                                     <img src="images/solair_500x500.jpg" alt="" width="350" height="350"
                                         style="border-style: groove; border-width:10px">
@@ -113,7 +163,7 @@
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#flush-collapseTwo" aria-expanded="false"
                                     aria-controls="flush-collapseTwo">
-                                    DS2
+                                    Aid the Knights of Catarina
                                 </button>
                             </h2>
                             <div id="flush-collapseTwo" class="accordion-collapse collapse"
@@ -149,7 +199,7 @@
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#flush-collapseThree" aria-expanded="false"
                                     aria-controls="flush-collapseThree">
-                                    DS2
+                                    Patronize the Crestfallen Warrior
                                 </button>
                             </h2>
                             <div id="flush-collapseThree" class="accordion-collapse collapse"
@@ -180,7 +230,7 @@
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#flush-collapseFour" aria-expanded="false"
                                     aria-controls="flush-collapseFour">
-                                    DS2
+                                    The Feud of House Thorolund
                                 </button>
                             </h2>
                             <div id="flush-collapseFour" class="accordion-collapse collapse"
@@ -214,7 +264,7 @@
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#flush-collapseFive" aria-expanded="false"
                                     aria-controls="flush-collapseFive">
-                                    DS2
+                                    The Honorless Knight of Carim
                                 </button>
                             </h2>
                             <div id="flush-collapseFive" class="accordion-collapse collapse"
@@ -247,7 +297,7 @@
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#flush-collapseSix" aria-expanded="false"
                                     aria-controls="flush-collapseSix">
-                                    DS2
+                                    Freeing Big Hat Logan
                                 </button>
                             </h2>
                             <div id="flush-collapseSix" class="accordion-collapse collapse"
@@ -279,7 +329,7 @@
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#flush-collapseSeven" aria-expanded="false"
                                     aria-controls="flush-collapseSeven">
-                                    DS2
+                                    Break Havel the Rock
                                 </button>
                             </h2>
                             <div id="flush-collapseSeven" class="accordion-collapse collapse"
@@ -312,54 +362,56 @@
                     <div class="container">
                         <div class="story">
                             <dl>
-                                <dt>DS2</dt>
-                                <dd>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur ipsam numquam nostrum consequuntur quod. Fugit suscipit deserunt eius aliquam explicabo nobis consequuntur, deleniti odit mollitia, perspiciatis obcaecati soluta, nihil enim?</dd>
+                                <dt>Undead Asylum:</dt>
+                                <dd>A decrepit asylum teeming with undead and guarded by a great demon. It serves as the
+                                    introductory area for the game. </dd>
                                 <hr>
 
-                                <dt>DS2:</dt>
-                                <dd>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat inventore aliquid et laborum molestias? Accusamus veritatis iste ratione, perspiciatis, praesentium dolorum rerum, voluptate deleniti temporibus blanditiis sunt? Id, debitis eveniet. </dd>
+                                <dt>Firelink Shrine:</dt>
+                                <dd>A lush, green cliff side ruin overlooking a city below. It serves as a central hub
+                                    and is the first location that is visited after escaping the Undead Asylum. </dd>
                                 <hr>
 
-                                <dt>DS2</dt>
+                                <dt>Undead Burg:</dt>
                                 <dd>A fortified section of a town surrounded by large walls and watchtowers, filled with
                                     hostile undead. </dd>
                                 <hr>
-                                <dt>DS2</dt>
+                                <dt>Undead Parish:</dt>
                                 <dd>A separate section of the Undead Burg, containing the Undead Church, along with
                                     various other buildings.</dd>
                                 <hr>
-                                <dt>DS2</dt>
+                                <dt>Depths:</dt>
                                 <dd>A vast, dark sewer system beneath the Undead Burg, containing various tunnels and
                                     waterways.</dd>
                                 <hr>
-                                <dt>DS2</dt>
+                                <dt>Blighttown:</dt>
                                 <dd>A toxic shantytown, built in a deep, dark swamp.</dd>
                                 <hr>
-                                <dt>DS2</dt>
+                                <dt>Quelaag's Domain:</dt>
                                 <dd>A large mound covered in spider webs. It serves as the lair of Chaos Witch Quelaag
                                     and her sister.</dd>
                                 <hr>
-                                <dt>DS2</dt>
+                                <dt>The Great Hollow:</dt>
                                 <dd>The hollowed out interior of an enormous Archtree, filled with dangerous Basilisks.
                                 </dd>
                                 <hr>
-                                <dt>DS2</dt>
+                                <dt>Ash Lake:</dt>
                                 <dd>A primordial land covered in Archtrees and bodies of water. Located deep below
                                     Lordran, the long-forgotten land is almost lifeless.</dd>
                                 <hr>
-                                <dt>DS2</dt>
+                                <dt>Sen's Fortress:</dt>
                                 <dd>A mysterious fort littered with deadly traps. Supposedly built by the ancient gods,
                                     it's the only route leading to Anor Londo.</dd>
                                 <hr>
-                                <dt>DS2:</dt>
+                                <dt>Anor Londo:</dt>
                                 <dd>A vast city located at the apex of Lordran. Once home to the gods, it lies
                                     abandoned.</dd>
                                 <hr>
-                                <dt>DS2</dt>
+                                <dt>Painted World of Ariamis:</dt>
                                 <dd>A mysterious, bleak and snowy land. Existing as a painting in Anor Londo, it's
                                     inhabited by dangerous creatures.</dd>
                                 <hr>
-                                <dt>DS2</dt>
+                                <dt>Darkroot Garden:</dt>
                                 <dd>A dark, dank forest located just outside the Undead Parish. Inhabited by living
                                     trees, it's also home to the Forest Hunter covenant.</dd>
                                 <hr>
@@ -1093,35 +1145,903 @@
                         </div>
                     </div>
                     <hr class="hr-text" data-content="Classes">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur vitae laboriosam itaque
-                        voluptate sint cupiditate animi voluptatibus ea hic, dolores ratione, earum at temporibus.
-                        Similique architecto quo ratione ducimus mollitia illum ipsam. Perferendis doloribus architecto,
-                        non ex corrupti eaque dolorem quod eligendi rem veniam dolorum. Sequi soluta voluptatem hic
-                        culpa, nesciunt magnam veniam illum similique voluptates excepturi nemo eum adipisci odit
-                        quisquam. Aut, provident minus magnam cumque, accusantium laudantium nemo sequi modi excepturi
-                        ipsa est exercitationem. Illum delectus sapiente corporis, aliquid veritatis laudantium,
-                        assumenda aperiam quae consectetur voluptas suscipit tempora consequuntur doloremque! Iste,
-                        laboriosam labore. Aut cum voluptatibus incidunt nesciunt earum id deserunt vero placeat ducimus
-                        autem voluptate, porro eligendi aliquid, ipsum officia. Nisi porro alias similique fugiat
-                        repudiandae facilis numquam molestias non molestiae aut! Dolor molestiae dolorum velit cum
-                        facere inventore aut omnis, harum perspiciatis quas beatae illum suscipit, quaerat officiis
-                        ducimus, doloribus vero rem culpa corporis sit quibusdam magni id praesentium fugiat. Repellat
-                        consequuntur et, accusamus ea voluptatem beatae sequi. Voluptates excepturi cumque aperiam
-                        obcaecati labore laboriosam tempora asperiores in sunt deleniti, quaerat ipsa facilis sapiente
-                        accusantium temporibus non quibusdam? Aut incidunt nisi nesciunt illum suscipit aliquid quia
-                        accusamus necessitatibus dolore non quidem dolores, enim aspernatur, provident inventore?</p>
+                    Classes in Dark Souls determine the starting Stats and Equipment of the player. There are 10 Classes
+                    in Dark Souls that the player can begin the game with. They are listed below:
+
+                    Classes do not determine what weapons, items, armor, or spells your character is able to use, they
+                    only determine what your character starts the game with. As you progress through the game and raise
+                    your levels, your character can potentially take up any role regardless of class.
+
+                    In addition to choosing a class, players can choose a gift to begin the game with. All gifts can be
+                    found in the game later on, but taking one here can let the player enjoy a benefit they wouldn't
+                    normally have until much later. A first time player should be careful about choosing gifts that will
+                    let them enter end-game areas from the start of the game such as the Master Key, since they could
+                    potentially end up stranded in a very difficult area without the knowledge or equipment to get back
+                    out. Note that the Master Key is infinitely reusable, and the Thief starting class begins the game
+                    with one already. Taking a second Master Key as a Thief is a waste of a gift.
+
+                    The cost of raising a level increases as your character's level increases. The amount of souls each
+                    level costs is the same for all classes, though classes begin at different levels. For example, a
+                    character that starts at level 1 may find leveling up to be extremely affordable, but the character
+                    who starts at level 10 didn't have to pay anything to get to that point. When the level 1 character
+                    reaches level 10, going from 10 to level 11 will cost exactly the same amount of souls as it would
+                    for the character who started at level 10. Because of this, starting at a lower level actually ends
+                    up costing more overall, however the player will be able to put their stats exactly where they want
+                    them instead of starting with a more pre-determined kit. The starting level of a character ignores
+                    the Resistance stat, so characters with high resistance start at lower levels than they would
+                    normally have otherwise.
                     <hr>
-                </div>
-                <div class="col-sm-2 sidenav"
-                    style="background-image: url(images/ds-background-dark.jpg); background-attachment: fixed; background-repeat: no-repeat; background-position: right; background-size: contain;">
-                    <div class="well">
-                        <p>ADS</p>
+
+                    <div class="section" style="display:flex;">
+                        <div class="col span_1_of_5">
+                            <h3 style="text-align: center;"><a class="wiki_link" title="Dark Souls Warrior"
+                                    href="/Warrior" target="">Warrior</a></h3>
+                            <div style="display: block; margin-left: auto; margin-right: auto;">
+                                <img style="display: block; margin-left: auto; margin-right: auto;"
+                                    src="images/warrior-starting-class-male-dark-souls.jpg" width="215" height="274"
+                                    alt="warrior starting class male dark souls">
+                            </div>
+                            <div class="table-responsive">
+                                <table class="wiki_table" style="border: 0px;">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <p class="section"><img style="width: 24px; " title="level"
+                                                        src="images/icon_level.png" alt="icon level" width="24"
+                                                        height="24">&nbsp;4</p>
+                                            </td>
+                                            <td>
+                                                <p class="section"><img title="vitality" src="images/icon_vitality.png"
+                                                        alt="icon vitality" width="24" height="24">&nbsp;11</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <p class="section"><img title="attunement"
+                                                        src="images/icon_attunement.png" alt="icon attunement"
+                                                        width="24" height="24">&nbsp;8</p>
+                                            </td>
+                                            <td>
+                                                <p class="section"><img title="endurance"
+                                                        src="images/icon_endurance.png" alt="icon endurance" width="24"
+                                                        height="24"> 12</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <p class="section"><img title="strength" src="images/icon_strength.png"
+                                                        alt="icon strength" width="24" height="24">&nbsp;13</p>
+                                            </td>
+                                            <td>
+                                                <p class="section"><img title="dexterity"
+                                                        src="images/icon_dexterity.png" alt="icon dexterity" width="24"
+                                                        height="24">&nbsp;13</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <p class="section"><img title="resistance"
+                                                        src="images/icon_resistance.png" alt="icon resistance"
+                                                        width="24" height="24">&nbsp;11</p>
+                                            </td>
+                                            <td>
+                                                <p class="section"><img title="intelligence"
+                                                        src="images/icon_intelligence.png" alt="icon intelligence"
+                                                        width="24" height="24">&nbsp;9</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><img src="images/icon_faith.png" width="24" height="24"
+                                                    alt="icon faith">&nbsp;9</td>
+                                            <td><img style="width: 24px; height: 24px;" title="humanity"
+                                                    src="images/icon_humanity.png" width="24" height="24">&nbsp;0</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="col span_1_of_5">
+                            <h3 style="text-align: center;"><a class="wiki_link" title="Dark Souls Knight"
+                                    href="/Knight" target="">Knight</a></h3>
+                            <img style="display: block; margin-left: auto; margin-right: auto; width: nullpx; height: nullpx;"
+                                src="images/knight-starting-class-male-dark-souls.jpg" width="215" height="274"
+                                alt="knight starting class male dark souls">
+                            <div class="table-responsive">
+                                <table class="wiki_table" style="border: 0px;">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <p class="section"><img style="width: 24px; height: nullpx;"
+                                                        title="level" src="images/icon_level.png" icon level" width="24"
+                                                        height="24">&nbsp;5</p>
+                                            </td>
+                                            <td>
+                                                <p class="section"><img title="vitality" src="images/icon_vitality.png"
+                                                        alt="icon vitality" width="24" height="24">&nbsp;14</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <p class="section"><img title="attunement"
+                                                        src="images/icon_attunement.png" alt="icon attunement"
+                                                        width="24" height="24">&nbsp;10</p>
+                                            </td>
+                                            <td>
+                                                <p class="section"><img style="width: 24px; height: nullpx;"
+                                                        title="endurance" src="images/icon_endurance.png"
+                                                        alt="icon endurance" width="24" height="24">&nbsp;10</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <p class="section"><img title="strength" src="images/icon_dexterity.png"
+                                                        alt="icon strength" width="24" height="24"> 11</p>
+                                            </td>
+                                            <td>
+                                                <p class="section"><img title="dexterity"
+                                                        src="images/icon_dexterity.png" alt="icon dexterity" width="24"
+                                                        height="24"> 11</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <p class="section"><img title="resistance"
+                                                        src="images/icon_resistance.png" alt="icon resistance"
+                                                        width="24" height="24"> 10</p>
+                                            </td>
+                                            <td>
+                                                <p class="section"><img title="intelligence"
+                                                        src="images/icon_intelligence.png" alt="icon intelligence"
+                                                        width="24" height="24">&nbsp;9</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><img src="images/icon_faith.png" width="24" height="24"
+                                                    alt="icon faith">&nbsp;11</td>
+                                            <td><img style="width: 24px; height: 24px;" title="humanity"
+                                                    src="images/icon_humanity.png" alt="icon humanity" width="24"
+                                                    height="24">&nbsp;0</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="col span_1_of_5">
+                            <h3 style="text-align: center;"><a class="wiki_link" title="Dark Souls Wanderer"
+                                    href="/Wanderer" target="">Wanderer</a></h3>
+                            <img style="display: block; margin-left: auto; margin-right: auto; width: nullpx; height: nullpx;"
+                                src="images/wanderer-starting-class-male-dark-souls.jpg" width="215" height="274"
+                                alt="wanderer starting class male dark souls">
+                            <div class="table-responsive">
+                                <table class="wiki_table" style="border: 0px;">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <p class="section"><img style="width: 24px; height: nullpx;"
+                                                        title="level" src="images/icon_level.png" alt="icon level"
+                                                        width="24" height="24">&nbsp;3</p>
+                                            </td>
+                                            <td>
+                                                <p class="section"><img title="vitality" src="images/icon_vitality.png"
+                                                        alt="icon vitality" width="24" height="24"> 10</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <p class="section"><img title="attunement"
+                                                        src="images/icon_attunement.png" alt="icon attunement"
+                                                        width="24" height="24"> 11</p>
+                                            </td>
+                                            <td>
+                                                <p class="section"><img style="width: 24px; height: nullpx;"
+                                                        title="endurance" src="images/icon_endurance.png"
+                                                        alt="icon endurance" width="24" height="24">&nbsp;10</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <p class="section"><img title="strength" src="images/icon_strength.png"
+                                                        alt="icon strength" width="24" height="24">&nbsp;10</p>
+                                            </td>
+                                            <td>
+                                                <p class="section"><img title="dexterity"
+                                                        src="images/icon_dexterity.png" alt="icon dexterity" width="24"
+                                                        height="24">&nbsp;14</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <p class="section"><img title="resistance"
+                                                        src="images/icon_resistance.png" alt="icon resistance"
+                                                        width="24" height="24">&nbsp;12</p>
+                                            </td>
+                                            <td>
+                                                <p class="section"><img title="intelligence"
+                                                        src="images/icon_intelligence.png" alt="icon intelligence"
+                                                        width="24" height="24">&nbsp;11</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><img src="images/icon_faith.png" width="24" height="24"
+                                                    alt="icon faith">&nbsp;8</td>
+                                            <td><img style="width: 24px; height: 24px;" title="humanity"
+                                                    src="images/icon_humanity.png" alt="icon humanity" width="24"
+                                                    height="24">&nbsp;0</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="col span_1_of_5">
+                            <h3 style="text-align: center;"><a class="wiki_link" title="Dark Souls Thief" href="/Thief"
+                                    target="">Thief</a></h3>
+                            <img style="display: block; margin-left: auto; margin-right: auto; width: nullpx; height: nullpx;"
+                                src="images/thief-starting-class-male-dark-souls.jpg" width="215" height="274"
+                                alt="thief starting class male dark souls">
+                            <div class="table-responsive">
+                                <table class="wiki_table" style="border: 0px;">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <p class="section"><img style="width: 24px; height: nullpx;"
+                                                        title="level" src="images/icon_level.png" alt="icon level"
+                                                        width="24" height="24">&nbsp;5</p>
+                                            </td>
+                                            <td>
+                                                <p class="section"><img title="vitality" src="images/icon_vitality.png"
+                                                        alt="icon vitality" width="24" height="24">&nbsp;9</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <p class="section"><img title="attunement"
+                                                        src="images/icon_attunement.png" alt="icon attunement"
+                                                        width="24" height="24"> 11</p>
+                                            </td>
+                                            <td>
+                                                <p class="section"><img style="width: 24px; height: nullpx;"
+                                                        title="endurance" src="images/icon_endurance.png"
+                                                        alt="icon endurance" width="24" height="24">&nbsp;9</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <p class="section"><img title="strength" src="images/icon_strength.png"
+                                                        alt="icon strength" width="24" height="24">&nbsp;9</p>
+                                            </td>
+                                            <td>
+                                                <p class="section"><img title="dexterity"
+                                                        src="images/icon_dexterity.png" alt="icon dexterity" width="24"
+                                                        height="24">&nbsp;15</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <p class="section"><img title="resistance"
+                                                        src="images/icon_resistance.png" alt="icon resistance"
+                                                        width="24" height="24">&nbsp;10</p>
+                                            </td>
+                                            <td>
+                                                <p class="section"><img title="intelligence"
+                                                        src="images/icon_intelligence.png" alt="icon intelligence"
+                                                        width="24" height="24">&nbsp;12</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><img src="images/icon_faith.png" width="24" height="24"
+                                                    alt="icon faith">&nbsp;11</td>
+                                            <td><img style="width: 24px; height: 24px;" title="humanity"
+                                                    src="images/icon_humanity.png" alt="icon humanity" width="24"
+                                                    height="24">&nbsp;0</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="col span_1_of_5">
+                            <h3 style="text-align: center;"><a class="wiki_link" title="Dark Souls Bandit"
+                                    href="/Bandit" target="">Bandit</a></h3>
+                            <img style="display: block; margin-left: auto; margin-right: auto; width: nullpx; height: nullpx;"
+                                src="images/bandit-starting-class-male-dark-souls.jpg" width="215" height="274"
+                                alt="bandit starting class male dark souls">
+                            <div class="table-responsive">
+                                <table class="wiki_table" style="border: 0px;">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <p class="section"><img style="width: 24px; height: nullpx;"
+                                                        title="level" src="images/icon_level.png" alt="icon level"
+                                                        width="24" height="24">&nbsp;4</p>
+                                            </td>
+                                            <td>
+                                                <p class="section"><img title="vitality" src="images/icon_vitality.png"
+                                                        alt="icon vitality" width="24" height="24">&nbsp;12</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <p class="section"><img title="attunement"
+                                                        src="images/icon_attunement.png" alt="icon attunement"
+                                                        width="24" height="24">&nbsp;8</p>
+                                            </td>
+                                            <td>
+                                                <p class="section"><img style="width: 24px; height: nullpx;"
+                                                        title="endurance" src="images/icon_endurance.png"
+                                                        alt="icon endurance" width="24" height="24">&nbsp;14</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <p class="section"><img title="strength" src="images/icon_strength.png"
+                                                        alt="icon strength" width="24" height="24"> 14</p>
+                                            </td>
+                                            <td>
+                                                <p class="section"><img title="dexterity"
+                                                        src="images/icon_dexterity.png" alt="icon dexterity" width="24"
+                                                        height="24">&nbsp;9</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <p class="section"><img title="resistance"
+                                                        src="images/icon_resistance.png" alt="icon resistance"
+                                                        width="24" height="24"> 11</p>
+                                            </td>
+                                            <td>
+                                                <p class="section"><img title="intelligence"
+                                                        src="images/icon_intelligence.png" alt="icon intelligence"
+                                                        width="24" height="24">&nbsp;8</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><img src="images/icon_faith.png" width="24" height="24"
+                                                    alt="icon faith">&nbsp;10</td>
+                                            <td><img style="width: 24px; height: 24px;" title="humanity"
+                                                    src="images/icon_humanity.png" alt="icon humanity" width="24"
+                                                    height="24">&nbsp;0</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
                     </div>
-                    <div class="well">
-                        <p>ADS</p>
+                    <hr>
+                    <div class="section" style="display:flex;">
+                        <div class="col span_1_of_5">
+                            <h3 style="text-align: center;"><a class="wiki_link" title="Dark Souls Hunter"
+                                    href="/Hunter" target="">Hunter</a></h3>
+                            <div style="display: block; margin-left: auto; margin-right: auto;">
+                                <img style="display: block; margin-left: auto; margin-right: auto; width: nullpx; height: nullpx;"
+                                    src="images/hunter-starting-class-male-dark-souls.jpg" width="215"
+                                    height="274" alt="hunter starting class male dark souls">
+                            </div>
+                            <div class="table-responsive">
+                                <table class="wiki_table" style="border: 0px;">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <p class="section"><img style="width: 24px; height: nullpx;"
+                                                        title="level" src="images/icon_level.png"
+                                                        alt="icon level" width="24" height="24">&nbsp;4</p>
+                                            </td>
+                                            <td>
+                                                <p class="section"><img title="vitality"
+                                                        src="images/icon_vitality.png" alt="icon vitality"
+                                                        width="24" height="24">&nbsp;11</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <p class="section"><img title="attunement"
+                                                        src="images/icon_attunement.png" alt="icon attunement"
+                                                        width="24" height="24">&nbsp;9</p>
+                                            </td>
+                                            <td>
+                                                <p class="section"><img style="width: 24px; height: nullpx;"
+                                                        title="endurance" src="images/icon_endurance.png"
+                                                        alt="icon endurance" width="24" height="24">&nbsp;11</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <p class="section"><img title="strength"
+                                                        src="images/icon_strength.png" alt="icon strength"
+                                                        width="24" height="24"> 12</p>
+                                            </td>
+                                            <td>
+                                                <p class="section"><img title="dexterity"
+                                                        src="images/icon_dexterity.png" alt="icon dexterity"
+                                                        width="24" height="24"> 14</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <p class="section"><img title="resistance"
+                                                        src="images/icon_resistance.png" alt="icon resistance"
+                                                        width="24" height="24"> 11</p>
+                                            </td>
+                                            <td>
+                                                <p class="section"><img title="intelligence"
+                                                        src="images/icon_intelligence.png"
+                                                        alt="icon intelligence" width="24" height="24"> 9</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><img src="images/icon_faith.png" width="24" height="24"
+                                                    alt="icon faith">&nbsp;9</td>
+                                            <td><img style="width: 24px; height: 24px;" title="humanity"
+                                                    src="images/icon_humanity.png" alt="icon humanity"
+                                                    width="24" height="24">&nbsp;0</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="col span_1_of_5">
+                            <h3 style="text-align: center;"><a class="wiki_link" title="Dark Souls Sorcerer"
+                                    href="/Sorcerer" target="">Sorcerer</a></h3>
+                            <img style="display: block; margin-left: auto; margin-right: auto; width: nullpx; height: nullpx;"
+                                src="images/sorcerer-starting-class-male-dark-souls.jpg" width="215"
+                                height="274" alt="sorcerer starting class male dark souls">
+                            <div class="table-responsive">
+                                <table class="wiki_table" style="border: 0px;">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <p class="section"><img style="width: 24px; height: nullpx;"
+                                                        title="level" src="images/icon_level.png"
+                                                        alt="icon level" width="24" height="24">&nbsp;3</p>
+                                            </td>
+                                            <td>
+                                                <p class="section"><img title="vitality"
+                                                        src="images/icon_vitality.png" alt="icon vitality"
+                                                        width="24" height="24">&nbsp;8</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <p class="section"><img title="attunement"
+                                                        src="images/icon_attunement.png" alt="icon attunement"
+                                                        width="24" height="24">&nbsp;15</p>
+                                            </td>
+                                            <td>
+                                                <p class="section"><img style="width: 24px; height: nullpx;"
+                                                        title="endurance" src="images/icon_endurance.png"
+                                                        alt="icon endurance" width="24" height="24">&nbsp;8</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <p class="section"><img title="strength"
+                                                        src="images/icon_strength.png" alt="icon strength"
+                                                        width="24" height="24">&nbsp;9</p>
+                                            </td>
+                                            <td>
+                                                <p class="section"><img title="dexterity"
+                                                        src="images/icon_dexterity.png" alt="icon dexterity"
+                                                        width="24" height="24"> 11</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <p class="section"><img title="resistance"
+                                                        src="images/icon_resistance.png" alt="icon resistance"
+                                                        width="24" height="24">&nbsp;8</p>
+                                            </td>
+                                            <td>
+                                                <p class="section"><img title="intelligence"
+                                                        src="images/icon_intelligence.png"
+                                                        alt="icon intelligence" width="24" height="24">&nbsp;15</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><img src="images/icon_faith.png" width="24" height="24"
+                                                    alt="icon faith">&nbsp;8</td>
+                                            <td><img style="width: 24px; height: 24px;" title="humanity"
+                                                    src="images/icon_humanity.png" alt="icon humanity"
+                                                    width="24" height="24">&nbsp;0</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="col span_1_of_5">
+                            <h3 style="text-align: center;"><a class="wiki_link" title="Dark Souls Pyromancer"
+                                    href="/Pyromancer" target="">Pyromancer</a></h3>
+                            <img style="display: block; margin-left: auto; margin-right: auto; width: nullpx; height: nullpx;"
+                                src="images/pyromancer-starting-class-male-dark-souls.jpg" width="215"
+                                height="274" alt="pyromancer starting class male dark souls">
+                            <div class="table-responsive">
+                                <table class="wiki_table" style="border: 0px;">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <p class="section"><img style="width: 24px; height: nullpx;"
+                                                        title="level" src="images/icon_level.png"
+                                                        alt="icon level" width="24" height="24">&nbsp;1</p>
+                                            </td>
+                                            <td>
+                                                <p class="section"><img title="vitality"
+                                                        src="images/icon_vitality.png" alt="icon vitality"
+                                                        width="24" height="24"> 10</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <p class="section"><img title="attunement"
+                                                        src="images/icon_attunement.png" alt="icon attunement"
+                                                        width="24" height="24"> 12</p>
+                                            </td>
+                                            <td>
+                                                <p class="section"><img style="width: 24px; height: nullpx;"
+                                                        title="endurance" src="images/icon_endurance.png"
+                                                        alt="icon endurance" width="24" height="24">&nbsp;11</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <p class="section"><img title="strength"
+                                                        src="images/icon_strength.png" alt="icon strength"
+                                                        width="24" height="24"> 12</p>
+                                            </td>
+                                            <td>
+                                                <p class="section"><img title="dexterity"
+                                                        src="images/icon_dexterity.png" alt="icon dexterity"
+                                                        width="24" height="24">&nbsp;9</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <p class="section"><img title="resistance"
+                                                        src="images/icon_resistance.png" alt="icon resistance"
+                                                        width="24" height="24"> 12</p>
+                                            </td>
+                                            <td>
+                                                <p class="section"><img title="intelligence"
+                                                        src="images/icon_intelligence.png"
+                                                        alt="icon intelligence" width="24" height="24">&nbsp;10</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><img src="images/icon_faith.png" width="24" height="24"
+                                                    alt="icon faith"> 8</td>
+                                            <td><img style="width: 24px; height: 24px;" title="humanity"
+                                                    src="images/icon_humanity.png" alt="icon humanity"
+                                                    width="24" height="24">&nbsp;0</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="col span_1_of_5">
+                            <h3 style="text-align: center;"><a class="wiki_link" title="Dark Souls Cleric"
+                                    href="/Cleric" target="">Cleric</a></h3>
+                            <img style="display: block; margin-left: auto; margin-right: auto; width: nullpx; height: nullpx;"
+                                src="images/cleric-starting-class-male-dark-souls.jpg" width="215"
+                                height="274" alt="cleric starting class male dark souls">
+                            <div class="table-responsive">
+                                <table class="wiki_table" style="border: 0px;">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <p class="section"><img style="width: 24px; height: nullpx;"
+                                                        title="level" src="images/icon_level.png"
+                                                        alt="icon level" width="24" height="24">&nbsp;2</p>
+                                            </td>
+                                            <td>
+                                                <p class="section"><img title="vitality"
+                                                        src="images/icon_vitality.png" alt="icon vitality"
+                                                        width="24" height="24">&nbsp;11</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <p class="section"><img title="attunement"
+                                                        src="images/icon_attunement.png" alt="icon attunement"
+                                                        width="24" height="24"> 11</p>
+                                            </td>
+                                            <td>
+                                                <p class="section"><img style="width: 24px; height: nullpx;"
+                                                        title="endurance" src="images/icon_endurance.png"
+                                                        alt="icon endurance" width="24" height="24">&nbsp;9</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <p class="section"><img title="strength"
+                                                        src="images/icon_strength.png" alt="icon strength"
+                                                        width="24" height="24">&nbsp;12</p>
+                                            </td>
+                                            <td>
+                                                <p class="section"><img title="dexterity"
+                                                        src="images/icon_dexterity.png" alt="icon dexterity"
+                                                        width="24" height="24">&nbsp;8</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <p class="section"><img title="resistance"
+                                                        src="images/icon_resistance.png" alt="icon resistance"
+                                                        width="24" height="24">&nbsp;11</p>
+                                            </td>
+                                            <td>
+                                                <p class="section"><img title="intelligence"
+                                                        src="images/icon_intelligence.png"
+                                                        alt="icon intelligence" width="24" height="24">&nbsp;8</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><img src="images/icon_faith.png" width="24" height="24"
+                                                    alt="icon faith">&nbsp;14</td>
+                                            <td><img style="width: 24px; height: 24px;" title="humanity"
+                                                    src="images/icon_humanity.png" alt="icon humanity"
+                                                    width="24" height="24">&nbsp;0</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="col span_1_of_5">
+                            <h3 style="text-align: center;"><a class="wiki_link" title="Dark Souls Deprived"
+                                    href="/Deprived" target="">Deprived</a></h3>
+                            <img style="display: block; margin-left: auto; margin-right: auto; width: nullpx; height: nullpx;"
+                                src="images/deprived-starting-class-male-dark-souls.jpg" width="215"
+                                height="274" alt="deprived starting class male dark souls">
+                            <div class="table-responsive">
+                                <table class="wiki_table" style="border: 0px;">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <p class="section"><img style="width: 24px; height: nullpx;"
+                                                        title="level" src="images/icon_level.png"
+                                                        alt="icon level" width="24" height="24">&nbsp;6</p>
+                                            </td>
+                                            <td>
+                                                <p class="section"><img title="vitality"
+                                                        src="images/icon_vitality.png" alt="icon vitality"
+                                                        width="24" height="24"> 11</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <p class="section"><img title="attunement"
+                                                        src="images/icon_attunement.png" alt="icon attunement"
+                                                        width="24" height="24"> 11</p>
+                                            </td>
+                                            <td>
+                                                <p class="section"><img style="width: 24px; height: nullpx;"
+                                                        title="endurance" src="images/icon_endurance.png"
+                                                        alt="icon endurance" width="24" height="24"> 11</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <p class="section"><img title="strength"
+                                                        src="images/icon_strength.png" alt="icon strength"
+                                                        width="24" height="24"> 11</p>
+                                            </td>
+                                            <td>
+                                                <p class="section"><img title="dexterity"
+                                                        src="images/icon_dexterity.png" alt="icon dexterity"
+                                                        width="24" height="24"> 11</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <p class="section"><img title="resistance"
+                                                        src="images/icon_resistance.png" alt="icon resistance"
+                                                        width="24" height="24"> 11</p>
+                                            </td>
+                                            <td>
+                                                <p class="section"><img title="intelligence"
+                                                        src="images/icon_intelligence.png"
+                                                        alt="icon intelligence" width="24" height="24"> 11</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><img src="images/icon_faith.png" width="24" height="24"
+                                                    alt="icon faith"> 11</td>
+                                            <td><img style="width: 24px; height: 24px;" title="humanity"
+                                                    src="images/icon_humanity.png" alt="icon humanity"
+                                                    width="24" height="24">&nbsp;0</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
                     </div>
+                <hr>
+                <div class="table-responsive">
+                    <table class="wiki_table">
+                        <tbody>
+                            <tr>
+                                <td>Class Characteristics</td>
+                                <td style="text-align: center;"><img style="width: 24px; height: nullpx;" title="level"
+                                        src="images/icon_level.png" alt="icon level" width="24" height="24"><br>LV</td>
+                                <td style="text-align: center;"><img title="vitality" src="images/icon_vitality.png"
+                                        alt="icon vitality" width="24" height="24"><br>VIT</td>
+                                <td style="text-align: center;"><img title="attunement" src="images/icon_attunement.png"
+                                        alt="icon attunement" width="24" height="24"><br>ATT</td>
+                                <td style="text-align: center;"><img style="width: 24px; height: nullpx;"
+                                        title="endurance" src="images/icon_endurance.png" alt="icon endurance"
+                                        width="24" height="24"><br>END</td>
+                                <td style="text-align: center;"><img title="strength" src="images/icon_strength.png"
+                                        alt="icon strength" width="24" height="24"><br>STR</td>
+                                <td style="text-align: center;"><img title="dexterity" src="images/icon_dexterity.png"
+                                        alt="icon dexterity" width="24" height="24"><br>DEX</td>
+                                <td style="text-align: center;"><img title="resistance" src="images/icon_resistance.png"
+                                        alt="icon resistance" width="24" height="24"><br>RES</td>
+                                <td style="text-align: center;"><img title="intelligence"
+                                        src="images/icon_intelligence.png" alt="icon intelligence" width="24"
+                                        height="24"><br>INT</td>
+                                <td style="text-align: center;"><img src="images/icon_faith.png" width="24" height="24"
+                                        alt="icon faith"><br>FTH</td>
+                                <td style="text-align: center;"><img style="width: 24px; height: 24px;" title="humanity"
+                                        src="images/icon_humanity.png" alt="icon humanity" width="24"
+                                        height="24"><br>HUM</td>
+                                <td style="text-align: center;">
+                                    <p>TOT</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><a class="wiki_link" title="Dark Souls Warrior" href="/Warrior"
+                                        target="">Warrior</a></td>
+                                <td style="text-align: center;">4</td>
+                                <td style="text-align: center;">11</td>
+                                <td style="text-align: center;">8</td>
+                                <td style="text-align: center;">12</td>
+                                <td style="text-align: center;">13</td>
+                                <td style="text-align: center;">13</td>
+                                <td style="text-align: center;">11</td>
+                                <td style="text-align: center;">9</td>
+                                <td style="text-align: center;">9</td>
+                                <td style="text-align: center;">0</td>
+                                <td style="text-align: center;">86</td>
+                            </tr>
+                            <tr>
+                                <td><a class="wiki_link" title="Dark Souls Knight" href="/Knight" target="">Knight</a>
+                                </td>
+                                <td style="text-align: center;">5</td>
+                                <td style="text-align: center;">14</td>
+                                <td style="text-align: center;">10</td>
+                                <td style="text-align: center;">10</td>
+                                <td style="text-align: center;">11</td>
+                                <td style="text-align: center;">11</td>
+                                <td style="text-align: center;">10</td>
+                                <td style="text-align: center;">9</td>
+                                <td style="text-align: center;">11</td>
+                                <td style="text-align: center;">0</td>
+                                <td style="text-align: center;">86</td>
+                            </tr>
+                            <tr>
+                                <td><a class="wiki_link" title="Dark Souls Wanderer" href="/Wanderer"
+                                        target="">Wanderer</a></td>
+                                <td style="text-align: center;">3</td>
+                                <td style="text-align: center;">10</td>
+                                <td style="text-align: center;">11</td>
+                                <td style="text-align: center;">10</td>
+                                <td style="text-align: center;">10</td>
+                                <td style="text-align: center;">14</td>
+                                <td style="text-align: center;">12</td>
+                                <td style="text-align: center;">11</td>
+                                <td style="text-align: center;">8</td>
+                                <td style="text-align: center;">0</td>
+                                <td style="text-align: center;">86</td>
+                            </tr>
+                            <tr>
+                                <td><a class="wiki_link" title="Dark Souls Thief" href="/Thief" target="">Thief</a>
+                                </td>
+                                <td style="text-align: center;">5</td>
+                                <td style="text-align: center;">9</td>
+                                <td style="text-align: center;">11</td>
+                                <td style="text-align: center;">9</td>
+                                <td style="text-align: center;">9</td>
+                                <td style="text-align: center;">15</td>
+                                <td style="text-align: center;">10</td>
+                                <td style="text-align: center;">12</td>
+                                <td style="text-align: center;">11</td>
+                                <td style="text-align: center;">0</td>
+                                <td style="text-align: center;">86</td>
+                            </tr>
+                            <tr>
+                                <td><a class="wiki_link" title="Dark Souls Bandit" href="/Bandit" target="">Bandit</a>
+                                </td>
+                                <td style="text-align: center;">4</td>
+                                <td style="text-align: center;">12</td>
+                                <td style="text-align: center;">8</td>
+                                <td style="text-align: center;">14</td>
+                                <td style="text-align: center;">14</td>
+                                <td style="text-align: center;">9</td>
+                                <td style="text-align: center;">11</td>
+                                <td style="text-align: center;">8</td>
+                                <td style="text-align: center;">10</td>
+                                <td style="text-align: center;">0</td>
+                                <td style="text-align: center;">86</td>
+                            </tr>
+                            <tr>
+                                <td><a class="wiki_link" title="Dark Souls Hunter" href="/Hunter" target="">Hunter</a>
+                                </td>
+                                <td style="text-align: center;">4</td>
+                                <td style="text-align: center;">11</td>
+                                <td style="text-align: center;">9</td>
+                                <td style="text-align: center;">11</td>
+                                <td style="text-align: center;">12</td>
+                                <td style="text-align: center;">14</td>
+                                <td style="text-align: center;">11</td>
+                                <td style="text-align: center;">9</td>
+                                <td style="text-align: center;">9</td>
+                                <td style="text-align: center;">0</td>
+                                <td style="text-align: center;">86</td>
+                            </tr>
+                            <tr>
+                                <td><a class="wiki_link" title="Dark Souls Sorcerer" href="/Sorcerer"
+                                        target="">Sorcerer</a></td>
+                                <td style="text-align: center;">3</td>
+                                <td style="text-align: center;">8</td>
+                                <td style="text-align: center;">15</td>
+                                <td style="text-align: center;">8</td>
+                                <td style="text-align: center;">9</td>
+                                <td style="text-align: center;">11</td>
+                                <td style="text-align: center;">8</td>
+                                <td style="text-align: center;">15</td>
+                                <td style="text-align: center;">8</td>
+                                <td style="text-align: center;">0</td>
+                                <td style="text-align: center;">82</td>
+                            </tr>
+                            <tr>
+                                <td><a class="wiki_link" title="Dark Souls Pyromancer" href="/Pyromancer"
+                                        target="">Pyromancer</a></td>
+                                <td style="text-align: center;">1</td>
+                                <td style="text-align: center;">10</td>
+                                <td style="text-align: center;">12</td>
+                                <td style="text-align: center;">11</td>
+                                <td style="text-align: center;">12</td>
+                                <td style="text-align: center;">9</td>
+                                <td style="text-align: center;">12</td>
+                                <td style="text-align: center;">10</td>
+                                <td style="text-align: center;">8</td>
+                                <td style="text-align: center;">0</td>
+                                <td style="text-align: center;">84</td>
+                            </tr>
+                            <tr>
+                                <td><a class="wiki_link" title="Dark Souls Cleric" href="/Cleric" target="">Cleric</a>
+                                </td>
+                                <td style="text-align: center;">2</td>
+                                <td style="text-align: center;">11</td>
+                                <td style="text-align: center;">11</td>
+                                <td style="text-align: center;">9</td>
+                                <td style="text-align: center;">12</td>
+                                <td style="text-align: center;">8</td>
+                                <td style="text-align: center;">11</td>
+                                <td style="text-align: center;">8</td>
+                                <td style="text-align: center;">14</td>
+                                <td style="text-align: center;">0</td>
+                                <td style="text-align: center;">84</td>
+                            </tr>
+                            <tr>
+                                <td><a class="wiki_link" title="Dark Souls Deprived" href="/Deprived"
+                                        target="">Deprived</a></td>
+                                <td style="text-align: center;">6</td>
+                                <td style="text-align: center;">11</td>
+                                <td style="text-align: center;">11</td>
+                                <td style="text-align: center;">11</td>
+                                <td style="text-align: center;">11</td>
+                                <td style="text-align: center;">11</td>
+                                <td style="text-align: center;">11</td>
+                                <td style="text-align: center;">11</td>
+                                <td style="text-align: center;">11</td>
+                                <td style="text-align: center;">0</td>
+                                <td style="text-align: center;">88</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
+                <hr>
             </div>
+            <div class="col-sm-1 sidenav"
+                style="background-image: url(images/ds-background-dark.jpg); background-attachment: fixed; background-repeat: no-repeat; background-position: right; background-size: contain;">
+            </div>
+        </div>
 
         </div>
 
@@ -1131,12 +2051,14 @@
 
 
 
-        <!-- <div class="Audio">
-            <audio controls autoplay loop>
+        <div class="Audio">
+            <audio loop id="backgroundAudio" style="display: none;">
                 <source src="audio/28_Gwyn, Lord of Cinder.mp3" type="audio/mp3">
                 Ваш браузер не поддерживает аудио элемент.
             </audio>
-        </div> -->
+
+        </div>
+
         <footer class="text-center text-lg-start text-white" style="background-color: rgb(51, 51, 51)">
 
             <div class="container p-4 pb-0">
