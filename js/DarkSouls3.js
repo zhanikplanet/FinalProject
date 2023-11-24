@@ -133,4 +133,18 @@ $(document).ready(function () {
   $("#staticBackdrop").on("hidden.bs.modal", function () {
     $("#youtubeVideo").attr("src", "");
   });
+  const animatedButtons = document.querySelectorAll('.visit');
+
+ 
+  animatedButtons.forEach(button => {
+    button.addEventListener("mouseover", () => {
+      
+      button.classList.add('shadow-pop-tr-hovered');
+    });
+
+    button.addEventListener("mouseout", () => {
+    
+      button.classList.remove('shadow-pop-tr-hovered');
+    });
+  });
 });
