@@ -1,7 +1,7 @@
-@import url("fonts/OptimusPrinceps.ttf");
+@import url("/fonts/OptimusPrinceps.ttf");
 @font-face {
   font-family: 'myFirstFont';
-  src: url('fonts/OptimusPrinceps.ttf') format('truetype');
+  src: url('/fonts/OptimusPrinceps.ttf') format('truetype');
 }
 * {
     margin: 0;
@@ -22,7 +22,7 @@ body {
   background-size: cover;
   background-color: #eaeaea !important;
 }
-/* Пример стилей для поискового поля и результатов поиска */
+
 #searchInput {
   width: 300px;
   padding: 8px;
