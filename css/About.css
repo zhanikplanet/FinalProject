@@ -1,7 +1,7 @@
-@import url("/fonts/OptimusPrinceps.ttf");
+@import url("fonts/OptimusPrinceps.ttf");
 @font-face {
   font-family: 'myFirstFont';
-  src: url('/fonts/OptimusPrinceps.ttf') format('truetype');
+  src: url('fonts/OptimusPrinceps.ttf') format('truetype');
 }
 * {
     margin: 0;

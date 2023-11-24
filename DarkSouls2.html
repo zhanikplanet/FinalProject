@@ -11,6 +11,7 @@
         integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 </head>
 
 <body>
@@ -51,14 +52,15 @@
 
     </header>
     <main>
-        <div class="mask">
-            <div id="load" class="loader">
-                <p>YOU DIED !</p>
-            </div>
-        </div>
+
 
         <div class="container-fluid text-center">
             <div class="row content">
+                <div class="mask">
+                    <div id="load" class="loader">
+                        <p>YOU DIED !</p>
+                    </div>
+                </div>
                 <div class="col-sm-1 sidenav"
                     style="background-image: url(images/ds-background-dark.jpg); background-position: left center; background-attachment:fixed; background-repeat: no-repeat; background-size: contain;">
 
@@ -474,11 +476,11 @@
                                 <div class="col">
                                     <div class="card shadow-sm">
                                         <img class="bd-placeholder-img card-img-top" width="100%" height="225"
-                                            src="images/Asylum-Demon.jpg" preserveAspectRatio="xMidYMid slice"
+                                            src="images/The_Last_Giant_-_01.webp" preserveAspectRatio="xMidYMid slice"
                                             focusable="false">
                                         </img>
                                         <div class="card-body">
-                                            <p class="card-header-pills">Name:Asylum Demon</p>
+                                            <p class="card-header-pills">Name:The Last Gyant</p>
                                             <p class="card-header-pills">Location:Northern Undead Asylum</p>
                                             <p class="card-header-pills">Loot: Humanity, Big Pilgrim’s Key, Demon’s
                                                 Great Hammer</p>
@@ -1172,7 +1174,7 @@
                                     href="/Warrior" target="">Warrior</a></h3>
                             <div style="display: block; margin-left: auto; margin-right: auto;">
                                 <img style="display: block; margin-left: auto; margin-right: auto;"
-                                    src="images/warrior-starting-class-male-dark-souls.jpg" width="215" height="274"
+                                    src="images/warrior.png" width="215" height="274"
                                     alt="warrior starting class male dark souls">
                             </div>
                             <div class="table-responsive">
@@ -1182,23 +1184,23 @@
                                             <td>
                                                 <p class="section"><img style="width: 24px; " title="level"
                                                         src="images/icon_level.png" alt="icon level" width="24"
-                                                        height="24">&nbsp;4</p>
+                                                        height="24">&nbsp;12</p>
                                             </td>
                                             <td>
                                                 <p class="section"><img title="vitality" src="images/icon_vitality.png"
-                                                        alt="icon vitality" width="24" height="24">&nbsp;11</p>
+                                                        alt="icon vitality" width="24" height="24">&nbsp;7</p>
                                             </td>
                                         </tr>
                                         <tr>
                                             <td>
                                                 <p class="section"><img title="attunement"
                                                         src="images/icon_attunement.png" alt="icon attunement"
-                                                        width="24" height="24">&nbsp;8</p>
+                                                        width="24" height="24">&nbsp;12</p>
                                             </td>
                                             <td>
                                                 <p class="section"><img title="endurance"
                                                         src="images/icon_endurance.png" alt="icon endurance" width="24"
-                                                        height="24"> 12</p>
+                                                        height="24"> 9</p>
                                             </td>
                                         </tr>
                                         <tr>
@@ -1238,7 +1240,7 @@
                             <h3 style="text-align: center;"><a class="wiki_link" title="Dark Souls Knight"
                                     href="/Knight" target="">Knight</a></h3>
                             <img style="display: block; margin-left: auto; margin-right: auto; width: nullpx; height: nullpx;"
-                                src="images/knight-starting-class-male-dark-souls.jpg" width="215" height="274"
+                                src="images/knight.png" width="215" height="274"
                                 alt="knight starting class male dark souls">
                             <div class="table-responsive">
                                 <table class="wiki_table" style="border: 0px;">
@@ -1304,7 +1306,7 @@
                             <h3 style="text-align: center;"><a class="wiki_link" title="Dark Souls Wanderer"
                                     href="/Wanderer" target="">Wanderer</a></h3>
                             <img style="display: block; margin-left: auto; margin-right: auto; width: nullpx; height: nullpx;"
-                                src="images/wanderer-starting-class-male-dark-souls.jpg" width="215" height="274"
+                                src="images/swordsman.png" width="215" height="274"
                                 alt="wanderer starting class male dark souls">
                             <div class="table-responsive">
                                 <table class="wiki_table" style="border: 0px;">
@@ -1370,7 +1372,7 @@
                             <h3 style="text-align: center;"><a class="wiki_link" title="Dark Souls Thief" href="/Thief"
                                     target="">Thief</a></h3>
                             <img style="display: block; margin-left: auto; margin-right: auto; width: nullpx; height: nullpx;"
-                                src="images/thief-starting-class-male-dark-souls.jpg" width="215" height="274"
+                                src="images/bandit.png" width="215" height="274"
                                 alt="thief starting class male dark souls">
                             <div class="table-responsive">
                                 <table class="wiki_table" style="border: 0px;">
@@ -1436,7 +1438,7 @@
                             <h3 style="text-align: center;"><a class="wiki_link" title="Dark Souls Bandit"
                                     href="/Bandit" target="">Bandit</a></h3>
                             <img style="display: block; margin-left: auto; margin-right: auto; width: nullpx; height: nullpx;"
-                                src="images/bandit-starting-class-male-dark-souls.jpg" width="215" height="274"
+                                src="images/bandit.png" width="215" height="274"
                                 alt="bandit starting class male dark souls">
                             <div class="table-responsive">
                                 <table class="wiki_table" style="border: 0px;">
@@ -1506,7 +1508,7 @@
                                     href="/Hunter" target="">Hunter</a></h3>
                             <div style="display: block; margin-left: auto; margin-right: auto;">
                                 <img style="display: block; margin-left: auto; margin-right: auto; width: nullpx; height: nullpx;"
-                                    src="images/hunter-starting-class-male-dark-souls.jpg" width="215" height="274"
+                                    src="images/explorer.png" width="215" height="274"
                                     alt="hunter starting class male dark souls">
                             </div>
                             <div class="table-responsive">
@@ -1573,7 +1575,7 @@
                             <h3 style="text-align: center;"><a class="wiki_link" title="Dark Souls Sorcerer"
                                     href="/Sorcerer" target="">Sorcerer</a></h3>
                             <img style="display: block; margin-left: auto; margin-right: auto; width: nullpx; height: nullpx;"
-                                src="images/sorcerer-starting-class-male-dark-souls.jpg" width="215" height="274"
+                                src="images/sorcerer.png" width="215" height="274"
                                 alt="sorcerer starting class male dark souls">
                             <div class="table-responsive">
                                 <table class="wiki_table" style="border: 0px;">
@@ -1639,7 +1641,7 @@
                             <h3 style="text-align: center;"><a class="wiki_link" title="Dark Souls Pyromancer"
                                     href="/Pyromancer" target="">Pyromancer</a></h3>
                             <img style="display: block; margin-left: auto; margin-right: auto; width: nullpx; height: nullpx;"
-                                src="images/pyromancer-starting-class-male-dark-souls.jpg" width="215" height="274"
+                                src="images/sorcerer.png" width="215" height="274"
                                 alt="pyromancer starting class male dark souls">
                             <div class="table-responsive">
                                 <table class="wiki_table" style="border: 0px;">
@@ -1705,7 +1707,7 @@
                             <h3 style="text-align: center;"><a class="wiki_link" title="Dark Souls Cleric"
                                     href="/Cleric" target="">Cleric</a></h3>
                             <img style="display: block; margin-left: auto; margin-right: auto; width: nullpx; height: nullpx;"
-                                src="images/cleric-starting-class-male-dark-souls.jpg" width="215" height="274"
+                                src="images/cleric.png" width="215" height="274"
                                 alt="cleric starting class male dark souls">
                             <div class="table-responsive">
                                 <table class="wiki_table" style="border: 0px;">
@@ -2045,7 +2047,7 @@
 
         <div class="Audio">
             <audio loop id="backgroundAudio" style="display: none;">
-                <source src="audio/28_Gwyn, Lord of Cinder.mp3" type="audio/mp3">
+                <source src="audio/1-03 Majula.mp3" type="audio/mp3">
                 Ваш браузер не поддерживает аудио элемент.
             </audio>
 
